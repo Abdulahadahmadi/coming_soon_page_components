@@ -1,10 +1,10 @@
-
 import './App.css';
+import Coming from './components/Coming';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <Coming />
     </div>
   );
 }
