@@ -2,6 +2,8 @@ import React from 'react'
 import logo from '../assets/images/logo.svg'
 import hero from '../assets/images/hero-mobile.jpg'
 import heroDesktop from '../assets/images/hero-desktop.jpg'
+import arrowBtn from '../assets/images/icon-arrow.svg'
+
 
 function coming() {
     return (
@@ -15,6 +17,12 @@ function coming() {
                 <p className='text-center text-orange-400 mt-4 px-10'>Hello fellow shoppers! We're currently building our new fashion store. 
                 Add your email below to stay up-to-date with announcements and our launch deals.</p>
             </div>
+            <form>
+                <div className='flex flex-col items-center justify-center'>
+                    <input className=' px-28 my-10 placeholder:text-start p-3 border-2 border-orange-200 rounded-full' type='email' placeholder='Enter your email' />
+                    <span>arrowBtn</span>
+                </div> 
+            </form>
         </div>
     )
 }
