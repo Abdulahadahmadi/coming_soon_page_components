@@ -6,23 +6,36 @@ import arrowBtn from '../assets/images/icon-arrow.svg'
 
 
 function coming() {
+    
+    const img = window.innerWidth < 675;
+    const heroImg = img ? hero : heroDesktop;
+    // if ($(window).width() < 960) {
+    //     alert('Less than 960');
+    //     }
+    //     else {
+    //     alert('More than 960');
+    //     }
+
     return (
-        <div className=''>
+    
+        <div className='w-auto flex flex-col items-center md:flex-row'>
             <div className=' text-center'>
                 <img className='float-left w-32 m-10' src={logo} alt="logoimg" />
-                <img className='lg:sr-only md:sr-only w-screen mb-4' src={hero} alt="heroimg" />
+                <img className='lg:sr-only md:sr-only max-w-fit mb-4' src={heroImg} alt="heroimg" />
+                {/* <img className='max-w-fit mb-4 md:sr-only' src={heroDesktop} alt="heroimg" /> */}
                 <h1 className='uppercase text-3xl text-orange-500 '>We're</h1>
                 <h1 className='uppercase text-3xl font-bold'>Coming</h1>
                 <h1 className='uppercase text-3xl font-bold'>Soon</h1>
                 <p className='text-center text-orange-400 mt-4 px-10'>Hello fellow shoppers! We're currently building our new fashion store. 
                 Add your email below to stay up-to-date with announcements and our launch deals.</p>
-            </div>
-            <form>
-                <div className='flex flex-col items-center justify-center'>
-                    <input className=' px-28 my-10 placeholder:text-start p-3 border-2 border-orange-200 rounded-full' type='email' placeholder='Enter your email' />
-                    <span>arrowBtn</span>
+                <form>
+                <div className='flex md:flex-col'>
+                    <input className='flex justify-center items-center my-10 w-screen py-2 placeholder:pl-6 mx-3 required
+                    border-2 border-orange-200 rounded-full md:px-44' type='email' placeholder='Enter your email' />
+                    
                 </div> 
             </form>
+            </div>
         </div>
     )
 }
