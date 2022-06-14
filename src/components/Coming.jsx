@@ -7,7 +7,7 @@ import arrowBtn from '../assets/images/icon-arrow.svg'
 
 function coming() {
     
-    const img = window.innerWidth < 675;
+    const img = window.screen.width < 675;
     const heroImg = img ? hero : heroDesktop;
     // if ($(window).width() < 960) {
     //     alert('Less than 960');
@@ -21,7 +21,7 @@ function coming() {
         <div className='w-auto flex flex-col items-center md:flex-row'>
             <div className=' text-center'>
                 <img className='float-left w-32 m-10' src={logo} alt="logoimg" />
-                <img className='lg:sr-only md:sr-only max-w-fit mb-4' src={heroImg} alt="heroimg" />
+                <img className=' max-w-fit mb-4' src={heroImg} alt="heroimg" />
                 {/* <img className='max-w-fit mb-4 md:sr-only' src={heroDesktop} alt="heroimg" /> */}
                 <h1 className='uppercase text-3xl text-orange-500 '>We're</h1>
                 <h1 className='uppercase text-3xl font-bold'>Coming</h1>
