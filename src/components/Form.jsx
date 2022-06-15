@@ -32,7 +32,7 @@ function Form() {
         if(Object.keys(formErrors).length === 0 && isSubmit){
             console.log(formData)
         }
-    }, [formErrors])
+    }, [formData, formErrors, isSubmit])
 
     const validate = (values) => {
         const errors = {}
